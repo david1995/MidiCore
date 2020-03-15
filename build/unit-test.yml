@@ -1,0 +1,24 @@
+parameters:
+  name: ''
+  nugetVersion: 4.9.2
+  sdkVersion: 3.1.101
+  artifactFileName: ''
+
+jobs:
+- job: ${{ parameters.name }}
+  steps:
+  - task: NuGetToolInstaller@0
+    displayName: 'Use NuGet'
+    inputs:
+      versionSpec: ${{ parameters.nugetVersion }}
+
+  - task: DotNetCoreInstaller@2
+    displayName: 'Use .NET Core'
+    inputs:
+      version: ${{ parameters.sdkVersion }}
+
+  - task: DotNetCoreCLI@2
+    displayName: 'dotnet test unit-tests'
+    inputs:
+      command: test
+      projects: 'test/unit-tests/**/*.Tests.csproj'

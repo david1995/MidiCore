@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <Authors>David Eiwen</Authors>
+    <Product>MidiCore</Product>
+    <Copyright>&#169; David Eiwen 2019</Copyright>
+    <PackageLicenseExpression>mit</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/david1995/MidiCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/david1995/MidiCore</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Midi</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+</Project>

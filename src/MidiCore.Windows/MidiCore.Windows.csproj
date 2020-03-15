@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.0;netcoreapp3.0;net46;net48</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MidiCore.BaseTypes\MidiCore.BaseTypes.csproj" />
+    <ProjectReference Include="..\MidiCore.GeneralMidiV1\MidiCore.GeneralMidiV1.csproj" />
+    <ProjectReference Include="..\MidiCore.Infrastructure.Interfaces\MidiCore.Infrastructure.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

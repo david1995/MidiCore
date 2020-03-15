@@ -1,0 +1,9 @@
+site_name: MidiCore
+repo_url: https://github.com/david1995/MidiCore
+theme: readthedocs
+
+nav:
+- 'Getting Started': getting-started.md
+- 'About MidiCore':
+  - License: license.md
+

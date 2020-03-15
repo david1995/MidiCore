@@ -1,5 +1,7 @@
 name: MidiCore.CI
 
+variables: { DotNetSdkVersionToUse: 3.1.102 }
+
 trigger:
 - master
 
@@ -7,10 +9,32 @@ resources:
 - repo: self
   clean: true
 
-jobs:
-- template: build.yml
-  parameters:
-    name: MidiCoreCI
-    artifactFileName: '$(Build.ArtifactStagingDirectory)/MidiCore-CI.zip'
-    pool:
-      vmImage: 'Ubuntu 16.04'
+stages:
+- stage: build
+  pool:
+    vmImage: 'Ubuntu 16.04'
+  jobs:
+  - template: build.yml
+    parameters:
+      name: MidiCoreCI_Build
+      artifactFileName: '$(Build.ArtifactStagingDirectory)/MidiCore-CI.zip'
+      sdkVersion: $(DotNetSdkVersionToUse)
+
+- stage: UnitTest
+  pool:
+    vmImage: 'Ubuntu 16.04'
+  jobs:
+  - template: unit-test.yml
+    parameters:
+      name: MidiCoreCI_UnitTest
+      sdkVersion: $(DotNetSdkVersionToUse)
+
+
+- stage: Release
+  pool:
+    vmImage: 'Ubuntu 16.04'
+  jobs:
+  - template: release.yml
+    parameters:
+      name: MidiCoreCI_Release
+      sdkVersion: $(DotNetSdkVersionToUse)

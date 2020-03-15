@@ -8,22 +8,114 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{8D1E14AF
 		build\azure-pipelines.yml = build\azure-pipelines.yml
 		build\build.ps1 = build\build.ps1
 		build\build.yml = build\build.yml
+		directory.build.props = directory.build.props
+		build\release.ps1 = build\release.ps1
+		build\release.yml = build\release.yml
+		build\unit-test.yml = build\unit-test.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D6CAE045-0507-48F4-B9F8-3A0B3621191A}"
+	ProjectSection(SolutionItems) = preProject
+		src\directory.build.props = src\directory.build.props
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E37E6CA9-334E-4869-B6A9-36CD4D1C1FC9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "meta", "meta", "{2711A475-11D0-4B9F-99FF-A9A43DF90C55}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		CONTRIBUTING.md = CONTRIBUTING.md
 		LICENSE = LICENSE
+		mkdocs.yml = mkdocs.yml
+		README.md = README.md
 		version.json = version.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit-tests", "unit-tests", "{0E57E5F8-B988-421A-95E2-54731B1E609F}"
+	ProjectSection(SolutionItems) = preProject
+		test\unit-tests\directory.build.props = test\unit-tests\directory.build.props
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MidiCore.BaseTypes", "src\MidiCore.BaseTypes\MidiCore.BaseTypes.csproj", "{911A9B85-57AA-4265-89F7-A2CA7F55E6B6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MidiCore.Infrastructure.Tests", "test\unit-tests\MidiCore.Infrastructure.Tests\MidiCore.Infrastructure.Tests.csproj", "{DD9546E8-31F9-456C-AA82-409D255C06D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MidiCore.Infrastructure.Interfaces", "src\MidiCore.Infrastructure.Interfaces\MidiCore.Infrastructure.Interfaces.csproj", "{6C0DCBC1-C980-48AC-BF3F-4AECB2523B12}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MidiCore.GeneralMidiV1", "src\MidiCore.GeneralMidiV1\MidiCore.GeneralMidiV1.csproj", "{5AD0972C-E3A1-4B06-9F98-0AC7E6055F0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MidiCore.GeneralMidiV1.Tests", "test\unit-tests\MidiCore.GeneralMidiV1.Tests\MidiCore.GeneralMidiV1.Tests.csproj", "{999BB734-962E-4A7E-B7F6-8C7E2ABD52D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2D9A3DBA-5264-4E57-93DC-6E71980E3668}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{D10CF33A-C2F4-46AB-A855-CC91F554CCC0}"
+	ProjectSection(SolutionItems) = preProject
+		docs\getting-started.md = docs\getting-started.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "about", "about", "{03FC280F-7783-430D-BC8F-851019380320}"
+	ProjectSection(SolutionItems) = preProject
+		docs\about\license.md = docs\about\license.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{76B7464C-81BD-4943-BEF3-A14A24714881}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEMPLATE", "{5AF62EF7-92A7-4BB3-90E7-1854AC027972}"
+	ProjectSection(SolutionItems) = preProject
+		.github\ISSUE_TEMPLATE\bug_report.md = .github\ISSUE_TEMPLATE\bug_report.md
+		.github\ISSUE_TEMPLATE\feature_request.md = .github\ISSUE_TEMPLATE\feature_request.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidiCore.Windows", "src\MidiCore.Windows\MidiCore.Windows.csproj", "{6FDC04ED-760A-4473-AED0-458FC080A822}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{911A9B85-57AA-4265-89F7-A2CA7F55E6B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{911A9B85-57AA-4265-89F7-A2CA7F55E6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{911A9B85-57AA-4265-89F7-A2CA7F55E6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{911A9B85-57AA-4265-89F7-A2CA7F55E6B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD9546E8-31F9-456C-AA82-409D255C06D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD9546E8-31F9-456C-AA82-409D255C06D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD9546E8-31F9-456C-AA82-409D255C06D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD9546E8-31F9-456C-AA82-409D255C06D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C0DCBC1-C980-48AC-BF3F-4AECB2523B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C0DCBC1-C980-48AC-BF3F-4AECB2523B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C0DCBC1-C980-48AC-BF3F-4AECB2523B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C0DCBC1-C980-48AC-BF3F-4AECB2523B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD0972C-E3A1-4B06-9F98-0AC7E6055F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD0972C-E3A1-4B06-9F98-0AC7E6055F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD0972C-E3A1-4B06-9F98-0AC7E6055F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD0972C-E3A1-4B06-9F98-0AC7E6055F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999BB734-962E-4A7E-B7F6-8C7E2ABD52D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999BB734-962E-4A7E-B7F6-8C7E2ABD52D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999BB734-962E-4A7E-B7F6-8C7E2ABD52D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999BB734-962E-4A7E-B7F6-8C7E2ABD52D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FDC04ED-760A-4473-AED0-458FC080A822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FDC04ED-760A-4473-AED0-458FC080A822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FDC04ED-760A-4473-AED0-458FC080A822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FDC04ED-760A-4473-AED0-458FC080A822}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E57E5F8-B988-421A-95E2-54731B1E609F} = {E37E6CA9-334E-4869-B6A9-36CD4D1C1FC9}
+		{911A9B85-57AA-4265-89F7-A2CA7F55E6B6} = {D6CAE045-0507-48F4-B9F8-3A0B3621191A}
+		{DD9546E8-31F9-456C-AA82-409D255C06D5} = {0E57E5F8-B988-421A-95E2-54731B1E609F}
+		{6C0DCBC1-C980-48AC-BF3F-4AECB2523B12} = {D6CAE045-0507-48F4-B9F8-3A0B3621191A}
+		{5AD0972C-E3A1-4B06-9F98-0AC7E6055F0B} = {D6CAE045-0507-48F4-B9F8-3A0B3621191A}
+		{999BB734-962E-4A7E-B7F6-8C7E2ABD52D7} = {0E57E5F8-B988-421A-95E2-54731B1E609F}
+		{03FC280F-7783-430D-BC8F-851019380320} = {D10CF33A-C2F4-46AB-A855-CC91F554CCC0}
+		{5AF62EF7-92A7-4BB3-90E7-1854AC027972} = {76B7464C-81BD-4943-BEF3-A14A24714881}
+		{6FDC04ED-760A-4473-AED0-458FC080A822} = {D6CAE045-0507-48F4-B9F8-3A0B3621191A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF389411-40C9-435B-B90E-82CF934E002B}
